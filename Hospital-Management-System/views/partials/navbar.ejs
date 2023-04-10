@@ -1,0 +1,35 @@
+<nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Hospital Management System</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <% if(currentUser) {%> <% if (currentUser.role === 'Doctor'){ %>
+        <a class="nav-link" href="/doctor">Dashboard</a>
+        <a href="/doctor/patient" class="nav-link">Patients</a>
+        <% } %> <% if (currentUser.role === 'FrontDesk'){ %>
+        <a class="nav-link" href="/frontdesk">Dashboard</a>
+        <a href="/frontdesk/register" class="nav-link">Register</a>
+        <% } %> <% if (currentUser.role === 'Admin'){ %>
+        <a class="nav-link" href="/admin">Dashboard</a>
+        <a href="/admin/register" class="nav-link">Register</a>
+        <% } %> <% if (currentUser.role === 'DataEntry'){ %>
+        <a class="nav-link" href="/dataentry">Dashboard</a>
+        <% } %>
+        <a class="nav-link" href="/logout">Logout</a>
+        <% } %>
+        <a class="nav-link" href="/contact">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</nav>

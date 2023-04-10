@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate')%>
+<div class="container">
+  <div class="col-sm-6 col-sm-offset-3 mx-auto">
+    <h1><span class="fa fa-sign-in"></span> Login</h1>
+
+    <!-- LOGIN FORM -->
+    <form action="/login" method="post" class="validated-form" novalidate>
+      <div class="form-floating mb-3">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          id="email"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="form-floating mb-3">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="password"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <button type="submit" class="btn btn-warning btn-lg">Login</button>
+    </form>
+
+    <hr />
+  </div>
+</div>

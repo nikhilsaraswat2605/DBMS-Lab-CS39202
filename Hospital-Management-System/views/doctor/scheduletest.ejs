@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate')%>
+<div class="container">
+  <div class="col-sm-6 col-sm-offset-3 mx-auto">
+    <h1><span class="fa fa-sign-in"></span> Schedule Test</h1>
+    <form
+      action="/doctor/patient/<%= id %>/test"
+      method="post"
+      class="validated-form"
+      novalidate
+    >
+      <div class="form-floating mb-3">
+        <label for="center">Test Center</label>
+        <input
+          type="text"
+          id="center"
+          class="form-control"
+          name="Testcenter"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="form-floating mb-3">
+        <label for="name">Test Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          name="Testname"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <button type="submit" class="btn btn-warning btn-lg">Register</button>
+    </form>
+    <hr />
+  </div>
+</div>
